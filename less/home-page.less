@@ -71,6 +71,10 @@
 
       .btn {
         .button(@btn-bg-color, @porcelain, 100px);
+
+        &.dark-theme {
+          .button(@porcelain, @btn-bg-color, 100px);
+        }
       }
 
       @media @phone {
@@ -107,7 +111,7 @@
     }
   }
 
-  .themes {
+  .themes-container {
     position: fixed;
     background: @porcelain;
     right: 0;
@@ -115,14 +119,21 @@
     z-index: 100;
     width: 8%;
     .flex(space-between, center);
-    color: black;
+    color: @main-font-color;
     padding: 10px;
     border-radius: 10px 0 0 0;
+    border: 1px solid #e0e0e0;
 
     span {
       font-size: 2rem;
       width: 10;
       cursor: pointer;
+    }
+
+    &.dark-theme {
+      background-color: #2a0053;
+      border: 1px solid lighten(#2a0053, 20%);
+      color: @porcelain;
     }
   }
 }// home

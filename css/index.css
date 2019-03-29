@@ -226,7 +226,7 @@ img {
   color: #c5c7c9;
 }
 .main-navigation.dark-theme {
-  background: #2a0053;
+  background: rgba(42, 0, 83, 0.8);
 }
 .main-navigation.dark-theme .logo {
   color: #f7eeff;
@@ -327,6 +327,25 @@ footer.dark-theme {
   color: #22283A;
   border: 1px solid #22283A;
 }
+.home .walk .walk-text .btn.dark-theme {
+  padding: 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  height: auto;
+  line-height: auto;
+  width: 100px;
+  background-color: #F6F7F8;
+  color: #22283A;
+}
+.home .walk .walk-text .btn.dark-theme:hover {
+  background-color: #22283A;
+  color: #F6F7F8;
+  border: 1px solid #F6F7F8;
+}
 @media ( max-width: 500px ) {
   .home .walk .walk-text {
     width: 100%;
@@ -359,7 +378,7 @@ footer.dark-theme {
     padding: 25px 15px;
   }
 }
-.home .themes {
+.home .themes-container {
   position: fixed;
   background: #F6F7F8;
   right: 0;
@@ -370,13 +389,19 @@ footer.dark-theme {
   justify-content: space-between;
   align-content: center;
   flex-direction: row;
-  color: black;
+  color: #5E6164;
   padding: 10px;
   border-radius: 10px 0 0 0;
+  border: 1px solid #e0e0e0;
 }
-.home .themes span {
+.home .themes-container span {
   font-size: 2rem;
   width: 10;
   cursor: pointer;
+}
+.home .themes-container.dark-theme {
+  background-color: #2a0053;
+  border: 1px solid #5e00b9;
+  color: #F6F7F8;
 }
 /*# sourceMappingURL=index.css.map */

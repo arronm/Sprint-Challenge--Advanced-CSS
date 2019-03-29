@@ -15,8 +15,8 @@
   <![endif]-->
 </head>
 
-<body class="dark-theme">
- <header class="main-navigation dark-theme">
+<body>
+ <header class="main-navigation">
    <div class="container nav-container">
      <h1 class="logo">SpaceWalkers</h1>
      <nav class="nav">
@@ -29,7 +29,7 @@
    </div>
  </header>
 
-  <div class="container home dark-theme">
+  <div class="container home">
 
     <header class="intro">
       <img src="img/main-header_low.jpg" data-src="img/main-header.png" class="lazy" alt="Earth view from space">
@@ -72,10 +72,10 @@
 
     </section>
 
-    <footer class="container footer-container dark-theme">
+    <footer class="container footer-container">
       <p>Copyright SpaceWalkers 2018</p>
     </footer>
-    <div class="themes">
+    <div class="themes-container">
       <span id="light-theme">light</span>
       <span id="dark-theme">dark</span>
     </div>
@@ -91,12 +91,16 @@
           });
           document.querySelector('.main-navigation').classList.remove('dark-theme');
           document.querySelector('body').classList.remove('dark-theme');
+          document.querySelector('.themes-container').classList.remove('dark-theme');
+          document.querySelector('.btn').classList.remove('dark-theme');
         } else {
           themedElements.forEach((element) => {
             element.classList.add('dark-theme');
           });
           document.querySelector('.main-navigation').classList.add('dark-theme');
           document.querySelector('body').classList.add('dark-theme');
+          document.querySelector('.themes-container').classList.add('dark-theme');
+          document.querySelector('.btn').classList.add('dark-theme');
         }
       };
 
