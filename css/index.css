@@ -247,6 +247,9 @@ footer {
   justify-content: center;
   align-items: center;
 }
+footer.container.footer-container {
+  margin-bottom: 5px;
+}
 footer.dark-theme {
   background: #2a0053;
   border: 1px double #5e00b9;
