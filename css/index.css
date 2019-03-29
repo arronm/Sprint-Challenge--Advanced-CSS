@@ -179,6 +179,21 @@ img {
 .main-navigation .logo {
   font-size: 4rem;
   margin-bottom: 20px;
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+}
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
 }
 .main-navigation .nav {
   display: flex;

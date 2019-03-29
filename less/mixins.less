@@ -27,3 +27,25 @@
     border: 1px solid @backgroundColor;
   }
 }
+
+.animatePulse(@timing: ease-in-out, @duration: 3s) {
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+
+  animation-timing-function: @timing;
+  animation-duration: @duration; 
+  
+  @keyframes pulse {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+    
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+}
