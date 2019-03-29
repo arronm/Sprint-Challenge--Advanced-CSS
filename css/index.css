@@ -1,3 +1,12 @@
+/*
+  Create @phone escaped variable for media
+*/
+/*
+  Create 2 different mixins
+  Parametric mixin for sign up button
+  Button mixin takes 2 arguments
+  Create hover state that swaps background color and font color
+*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -160,6 +169,38 @@ p {
   width: 100%;
   margin: 0 auto;
 }
+.main-navigation {
+  background: #F6F6F6;
+}
+.main-navigation .nav-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 15px 0;
+  text-align: center;
+}
+.main-navigation .logo {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+.main-navigation .nav {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+}
+.main-navigation .nav .nav-link {
+  font-size: 1.6rem;
+  padding: 0 16px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #5E6164;
+}
+.main-navigation .nav .nav-link:hover {
+  color: #c5c7c9;
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
@@ -220,9 +261,5 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
-}
-html,
-body {
-  background: red;
 }
 /*# sourceMappingURL=index.css.map */
