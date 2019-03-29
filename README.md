@@ -36,7 +36,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 This gets pretty fuzzy with the industry. Easiest explanation is that adaptive is static, hard-coded breakpoints--which could mean a separate site (like m.site.com vs site.com) or it could be hard coded changes at media breakpoints where content snaps.
 
-Responsive is dynamic so the layout uses responsive unites, meaning as you resize the window the elements resize with it. Then media queries added on top can adjust layout to better suit device size.
+Responsive is dynamic so the layout uses responsive units, meaning as you resize the window the elements resize with it. Then media queries added on top can adjust layout to better suit device size.
 
 2. Describe what it means to be mobile first vs desktop first.
 
