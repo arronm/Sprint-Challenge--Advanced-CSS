@@ -165,7 +165,9 @@ img {
   margin: 0 auto;
 }
 .main-navigation {
-  background: #F6F6F6;
+  position: fixed;
+  width: 100%;
+  background: rgba(246, 246, 246, 0.8);
 }
 .main-navigation .nav-container {
   display: flex;
@@ -223,6 +225,7 @@ footer {
 }
 .home .intro img {
   border-radius: 5px;
+  margin-top: 106px;
 }
 .home .intro h2 {
   padding: 15px;
