@@ -1,8 +1,11 @@
 // Home Content
 
 .home {
-
   .intro {
+    img {
+      border-radius: 5px;
+      margin-top: 106px;
+    }
 
     h2 {
       padding: 15px;
@@ -24,6 +27,15 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
+      @media @phone {
+        width: 100%;
+        margin: 20px;
+
+        &.sky, &.launch {
+          display: none;
+        }
+      }
     }
   }
 
@@ -58,6 +70,20 @@
       }
 
       .btn {
+        .button(@btn-bg-color, @porcelain, 100px);
+
+        &.dark-theme {
+          .button(@porcelain, @btn-bg-color, 100px);
+        }
+      }
+
+      @media @phone {
+        width: 100%;
+
+        .btn {
+          width: 100%;
+          padding: 20px;
+        }
       }
     }
 
@@ -70,6 +96,45 @@
         height: auto;
         border-radius: 10px;
       }
+
+      @media @phone {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media @phone {
+      flex-direction: column-reverse;
+      margin-top: 20px;
+      padding: 25px 15px;
+    }
+  }
+
+  .themes-container {
+    position: fixed;
+    background: @porcelain;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 8%;
+    min-width: 115px;
+    padding: 10px;
+    border-radius: 10px 0 0 0;
+    border: 1px solid #e0e0e0;
+    color: @main-font-color;
+    .flex(space-between, center);
+
+    span {
+      font-size: 2rem;
+      width: 10;
+      cursor: pointer;
+    }
+
+    &.dark-theme {
+      background-color: #2a0053;
+      border: 1px solid lighten(#2a0053, 20%);
+      color: @porcelain;
     }
   }
 }// home

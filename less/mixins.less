@@ -1,1 +1,51 @@
 // Mixins Here
+.flex(@justify: center, @align: center, @direction: row) {
+  display: flex;
+  justify-content: @justify;
+  align-content: @align;
+  flex-direction: @direction;
+}
+
+.button(@backgroundColor: @btn-bg-color, @fontColor: @porcelain, @width: auto, @height: auto) {
+  padding: 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 5px;
+
+  height: @height;
+  line-height: @height;
+  width: @width;
+  background-color: @backgroundColor;
+  color: @fontColor;
+
+  &:hover {
+    background-color: @fontColor;
+    color: @backgroundColor;
+    border: 1px solid @backgroundColor;
+  }
+}
+
+.animatePulse(@timing: ease-in-out, @duration: 3s) {
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+
+  animation-timing-function: @timing;
+  animation-duration: @duration; 
+  
+  @keyframes pulse {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+    
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+}

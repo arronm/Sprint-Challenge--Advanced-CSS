@@ -1,0 +1,411 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: #5E6164;
+}
+html.dark-theme,
+body.dark-theme {
+  background: #16002c;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Russo One', sans-serif;
+  color: #23293B;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+.container.dark-theme {
+  color: #F6F7F8;
+}
+.container.dark-theme h1,
+.container.dark-theme h2,
+.container.dark-theme h3 {
+  color: #f7eeff;
+}
+.main-navigation {
+  position: fixed;
+  width: 100%;
+  background: rgba(246, 246, 246, 0.8);
+}
+.main-navigation .nav-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 15px 0;
+  text-align: center;
+}
+.main-navigation .logo {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+}
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+.main-navigation .nav {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+}
+.main-navigation .nav .nav-link {
+  font-size: 1.6rem;
+  padding: 0 16px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #5E6164;
+}
+.main-navigation .nav .nav-link:hover {
+  color: #c5c7c9;
+}
+.main-navigation.dark-theme {
+  background: rgba(42, 0, 83, 0.8);
+}
+.main-navigation.dark-theme .logo {
+  color: #f7eeff;
+}
+.main-navigation.dark-theme .nav .nav-link {
+  color: #F6F7F8;
+}
+.main-navigation.dark-theme .nav .nav-link:hover {
+  color: #83919f;
+}
+footer {
+  color: #22283B;
+  background: #f4f4f4;
+  padding: 20px 0;
+  border: 1px double #e0e0e0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer.container.footer-container {
+  margin-bottom: 5px;
+}
+footer.dark-theme {
+  background: #2a0053;
+  border: 1px double #5e00b9;
+  color: #F6F7F8;
+}
+.home .intro img {
+  border-radius: 5px;
+  margin-top: 106px;
+}
+.home .intro h2 {
+  padding: 15px;
+}
+.home .intro p {
+  padding: 0 15px;
+}
+.home .space-images {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.home .space-images img {
+  width: 28%;
+  margin: 20px 2.5%;
+  border-radius: 20px;
+  height: 100%;
+}
+@media ( max-width: 500px ) {
+  .home .space-images img {
+    width: 100%;
+    margin: 20px;
+  }
+  .home .space-images img.sky,
+  .home .space-images img.launch {
+    display: none;
+  }
+}
+.home .visit-planets {
+  padding: 15px;
+}
+.home .visit-planets h3 {
+  margin-top: 11px;
+}
+.home .visit-planets p {
+  margin-top: 13px;
+}
+.home .walk {
+  margin-top: 60px;
+  border-top: 1px solid #dee2e6;
+  padding: 50px 60px;
+  display: flex;
+  justify-content: center;
+}
+.home .walk .walk-text {
+  width: 50%;
+}
+.home .walk .walk-text h3 {
+  margin-bottom: 10px;
+}
+.home .walk .walk-text p {
+  margin-bottom: 26px;
+}
+.home .walk .walk-text .btn {
+  padding: 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  height: auto;
+  line-height: auto;
+  width: 100px;
+  background-color: #22283A;
+  color: #F6F7F8;
+}
+.home .walk .walk-text .btn:hover {
+  background-color: #F6F7F8;
+  color: #22283A;
+  border: 1px solid #22283A;
+}
+.home .walk .walk-text .btn.dark-theme {
+  padding: 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  height: auto;
+  line-height: auto;
+  width: 100px;
+  background-color: #F6F7F8;
+  color: #22283A;
+}
+.home .walk .walk-text .btn.dark-theme:hover {
+  background-color: #22283A;
+  color: #F6F7F8;
+  border: 1px solid #F6F7F8;
+}
+@media ( max-width: 500px ) {
+  .home .walk .walk-text {
+    width: 100%;
+  }
+  .home .walk .walk-text .btn {
+    width: 100%;
+    padding: 20px;
+  }
+}
+.home .walk .walk-img {
+  width: 46%;
+  margin-left: 4%;
+}
+.home .walk .walk-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+@media ( max-width: 500px ) {
+  .home .walk .walk-img {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+}
+@media ( max-width: 500px ) {
+  .home .walk {
+    flex-direction: column-reverse;
+    margin-top: 20px;
+    padding: 25px 15px;
+  }
+}
+.home .themes-container {
+  position: fixed;
+  background: #F6F7F8;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 8%;
+  min-width: 115px;
+  padding: 10px;
+  border-radius: 10px 0 0 0;
+  border: 1px solid #e0e0e0;
+  color: #5E6164;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: row;
+}
+.home .themes-container span {
+  font-size: 2rem;
+  width: 10;
+  cursor: pointer;
+}
+.home .themes-container.dark-theme {
+  background-color: #2a0053;
+  border: 1px solid #5e00b9;
+  color: #F6F7F8;
+}
+/*# sourceMappingURL=index.css.map */

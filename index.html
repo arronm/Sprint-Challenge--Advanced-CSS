@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>SpaceWalkers</title>
 
@@ -15,23 +16,32 @@
 </head>
 
 <body>
-
- <!-- navigation code here -->
+ <header class="main-navigation">
+   <div class="container nav-container">
+     <h1 class="logo">SpaceWalkers</h1>
+     <nav class="nav">
+       <a href="#" class="nav-link">Home</a>
+       <a href="#" class="nav-link">About Us</a>
+       <a href="#" class="nav-link">Blog</a>
+       <a href="#" class="nav-link">Contact</a>
+       <a href="#" class="nav-link">Sign In</a>
+     </nav>
+   </div>
+ </header>
 
   <div class="container home">
 
     <header class="intro">
-       <!-- image code here -->
-
+      <img src="img/main-header_low.jpg" data-src="img/main-header.png" class="lazy" alt="Earth view from space">
       <h2>Lift Off</h2>
     
       <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would fall apart. Seeing this has to change a man.</p>
     </header>
 
     <section class="space-images">
-        <img src="img/blast.png" class="blast" alt="Rocket blasting off">
-        <img src="img/sky.png" class="sky" alt="Space sky image">
-        <img src="img/launch.png" class="launch" alt="Launching rocket">
+        <img src="img/blast_low.jpg" data-src="img/blast.png" class="blast lazy" alt="Rocket blasting off">
+        <img src="img/sky_low.jpg" data-src="img/sky.png" class="sky lazy" alt="Space sky image">
+        <img src="img/launch_low.jpg" data-src="img/launch.png" class="launch lazy" alt="Launching rocket">
     </section>
    
     <section class="visit-planets">
@@ -57,15 +67,45 @@
       </div>
       
       <div class="walk-img">
-          <img src="img/space-walk.png" alt="Space walking astronaut">
+          <img src="img/space-walk_low.jpg" data-src="img/space-walk.png" class="lazy" alt="Space walking astronaut">
       </div>
 
     </section>
 
-    <footer>
+    <footer class="container footer-container">
       <p>Copyright SpaceWalkers 2018</p>
     </footer>
-
+    <div class="themes-container">
+      <span id="light-theme">light</span>
+      <span id="dark-theme">dark</span>
+    </div>
   </div>
+  <script src="js/lazyLoad.js"></script>
+  <script>
+    const themedElements = document.querySelectorAll('.container');
+    document.addEventListener('click', (event) => {
+      if (event.target.matches('#light-theme') || event.target.matches('#dark-theme')) {
+        if (event.target.matches('#light-theme')) {
+          themedElements.forEach((element) => {
+            element.classList.remove('dark-theme');
+          });
+          document.querySelector('.main-navigation').classList.remove('dark-theme');
+          document.querySelector('body').classList.remove('dark-theme');
+          document.querySelector('.themes-container').classList.remove('dark-theme');
+          document.querySelector('.btn').classList.remove('dark-theme');
+        } else {
+          themedElements.forEach((element) => {
+            element.classList.add('dark-theme');
+          });
+          document.querySelector('.main-navigation').classList.add('dark-theme');
+          document.querySelector('body').classList.add('dark-theme');
+          document.querySelector('.themes-container').classList.add('dark-theme');
+          document.querySelector('.btn').classList.add('dark-theme');
+        }
+      };
+
+      return;
+    });
+  </script>
 </body>
 </html>

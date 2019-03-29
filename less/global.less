@@ -10,6 +10,10 @@ html {
 html, body {
   font-family: 'Ubuntu', sans-serif;
   color: @main-font-color;
+
+  &.dark-theme {
+    background: #16002c;
+  }
 }
 
 h1, h2, h3, h4, h5 {
@@ -30,9 +34,22 @@ p {
   line-height: 1.4;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .container {
   max-width: 800px;
   width: 100%;
-  margin: 0 auto;  
+  margin: 0 auto;
+  
+  &.dark-theme {
+    color: @porcelain;
+
+    h1, h2, h3 {
+      color: #f7eeff;
+    }
+  }
 }
 

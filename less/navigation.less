@@ -1,1 +1,52 @@
 // Navigation code here
+.main-navigation {
+  position: fixed;
+  width: 100%;
+
+  background: rgba(246, 246, 246, 0.8);
+
+  .nav-container {
+    .flex(center, center, column);
+    flex-wrap: wrap;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    .animatePulse();
+  }
+
+  .nav {
+    .flex(center, center);
+
+    .nav-link {
+      font-size: 1.6rem;
+      padding: 0 16px;
+      text-decoration: none;
+      font-weight: 600;
+      color: @main-font-color;
+
+      &:hover {
+        color: lighten(@main-font-color, 40%);
+      }
+    }
+  }
+
+  &.dark-theme {
+    background: rgba(42, 0, 83, 0.8);
+
+    .logo {
+      color: #f7eeff;
+    }
+
+    .nav .nav-link {
+      color: @porcelain;
+
+      &:hover {
+        color: darken(@porcelain, 40%);
+      }
+    }
+  }
+}
