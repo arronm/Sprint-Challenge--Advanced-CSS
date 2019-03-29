@@ -15,8 +15,8 @@
   <![endif]-->
 </head>
 
-<body>
- <header class="main-navigation">
+<body class="dark-theme">
+ <header class="main-navigation dark-theme">
    <div class="container nav-container">
      <h1 class="logo">SpaceWalkers</h1>
      <nav class="nav">
@@ -29,7 +29,7 @@
    </div>
  </header>
 
-  <div class="container home">
+  <div class="container home dark-theme">
 
     <header class="intro">
       <img src="img/main-header_low.jpg" data-src="img/main-header.png" class="lazy" alt="Earth view from space">
@@ -72,11 +72,23 @@
 
     </section>
 
-    <footer>
+    <footer class="container footer-container dark-theme">
       <p>Copyright SpaceWalkers 2018</p>
     </footer>
-
+    <div class="themes">
+      <span id="light-theme">light</span>
+      <span id="dark-theme">dark</span>
+    </div>
   </div>
   <script src="js/lazyLoad.js"></script>
+  <script>
+    document.addEventListener('click', (event) => {
+      if (event.target.matches('#light-theme') || event.target.matches('#dark-theme')) {
+        
+      };
+
+      return;
+    });
+  </script>
 </body>
 </html>

@@ -137,6 +137,10 @@ body {
   font-family: 'Ubuntu', sans-serif;
   color: #5E6164;
 }
+html.dark-theme,
+body.dark-theme {
+  background: #16002c;
+}
 h1,
 h2,
 h3,
@@ -163,6 +167,14 @@ img {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+}
+.container.dark-theme {
+  color: #F6F7F8;
+}
+.container.dark-theme h1,
+.container.dark-theme h2,
+.container.dark-theme h3 {
+  color: #f7eeff;
 }
 .main-navigation {
   position: fixed;
@@ -213,6 +225,18 @@ img {
 .main-navigation .nav .nav-link:hover {
   color: #c5c7c9;
 }
+.main-navigation.dark-theme {
+  background: #2a0053;
+}
+.main-navigation.dark-theme .logo {
+  color: #f7eeff;
+}
+.main-navigation.dark-theme .nav .nav-link {
+  color: #F6F7F8;
+}
+.main-navigation.dark-theme .nav .nav-link:hover {
+  color: #83919f;
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
@@ -222,6 +246,11 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+footer.dark-theme {
+  background: #2a0053;
+  border: 1px double #5e00b9;
+  color: #F6F7F8;
 }
 .home .intro img {
   border-radius: 5px;
@@ -329,5 +358,25 @@ footer {
     margin-top: 20px;
     padding: 25px 15px;
   }
+}
+.home .themes {
+  position: fixed;
+  background: #F6F7F8;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: row;
+  color: black;
+  padding: 10px;
+  border-radius: 10px 0 0 0;
+}
+.home .themes span {
+  font-size: 2rem;
+  width: 10;
+  cursor: pointer;
 }
 /*# sourceMappingURL=index.css.map */
