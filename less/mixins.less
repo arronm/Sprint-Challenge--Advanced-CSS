@@ -1,9 +1,9 @@
 // Mixins Here
 
 /*
-  Create 2 different mixins
-  Parametric mixin for sign up button
-  Button mixin takes 2 arguments
+  * Create 2 different mixins
+  * Parametric mixin for sign up button
+  * Button mixin takes 2 arguments
   Create hover state that swaps background color and font color
 */
 
@@ -12,4 +12,26 @@
   justify-content: @justify;
   align-content: @align;
   flex-direction: @direction;
+}
+
+.button(@backgroundColor: @btn-bg-color, @fontColor: @porcelain, @width: auto, @height: auto) {
+  padding: 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 5px;
+
+  height: @height;
+  line-height: @height;
+  width: @width;
+  background-color: @backgroundColor;
+  color: @fontColor;
+
+  &:hover {
+    background-color: @fontColor;
+    color: @backgroundColor;
+    border: 1px solid @backgroundColor;
+  }
 }
