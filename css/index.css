@@ -385,14 +385,15 @@ footer.dark-theme {
   bottom: 0;
   z-index: 100;
   width: 8%;
+  min-width: 115px;
+  padding: 10px;
+  border-radius: 10px 0 0 0;
+  border: 1px solid #e0e0e0;
+  color: #5E6164;
   display: flex;
   justify-content: space-between;
   align-content: center;
   flex-direction: row;
-  color: #5E6164;
-  padding: 10px;
-  border-radius: 10px 0 0 0;
-  border: 1px solid #e0e0e0;
 }
 .home .themes-container span {
   font-size: 2rem;
